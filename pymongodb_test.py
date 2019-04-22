@@ -8,17 +8,16 @@ def main():
         os.environ["MONGO_USERNAME"],
         os.environ["MONGO_PASSWORD"],
         os.environ["MONGO_HOST"],
-        os.environ["MONGO_PORT"],
         os.environ["MONGO_DBNAME"])
         #mongodb+srv://Objective:<password>@cluster0-emrl4.mongodb.net/test?retryWrites=true
     client = pymongo.MongoClient(url)
     db = client[os.environ["MONGO_DBNAME"]]
-    collection = db['myCollection'] #put the name of your collection in the quotes
+    collection = db['Finances'] #put the name of your collection in the quotes
 
     #1. print the number of documents in collection
-
+    posts.count_documetns({})
     #2. print the first document in the collection
-
+    posts.count_documents({"Name":"Jaryd"})
     #3. print all documents in the collection
 
     #4. print all documents with a particular value for some attribute
