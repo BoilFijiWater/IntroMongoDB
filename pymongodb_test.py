@@ -19,9 +19,10 @@ def main():
     #1. print the number of documents in collection
     print(collection.count_documents({}))
     #2. print the first document in the collection
-    print(collection.count_documents({}))
+    print(collection.find_one({}))
     #3. print all documents in the collection
-
+    for InfoWars in collection.find({}):
+        print(InfoWars)
     #4. print all documents with a particular value for some attribute
     #ex. print all documents with the birth date 12/1/1990
 
